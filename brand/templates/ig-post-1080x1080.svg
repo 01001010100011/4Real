@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-labelledby="t">
+  <title id="t">4Real template post Instagram 1080x1080</title>
+  <rect width="1080" height="1080" fill="#04070F"/>
+  <g stroke="#3B82F6" stroke-width="2" opacity="0.12">
+    <path d="M640 1080 L1080 640"/><path d="M700 1080 L1080 700"/><path d="M760 1080 L1080 760"/>
+    <path d="M820 1080 L1080 820"/><path d="M880 1080 L1080 880"/><path d="M940 1080 L1080 940"/>
+    <path d="M1000 1080 L1080 1000"/>
+  </g>
+  <text x="80" y="120" font-family="Space Mono, monospace" font-size="28" font-weight="700" letter-spacing="10" fill="#A5D8FF">LISTA STUDENTESCA · 2026</text>
+  <text x="80" y="480" font-family="Space Grotesk, sans-serif" font-size="120" font-weight="700" fill="#FFFFFF">TITOLO DEL</text>
+  <text x="80" y="600" font-family="Space Grotesk, sans-serif" font-size="120" font-weight="700" fill="#5B9CFF">POST QUI</text>
+  <text x="80" y="700" font-family="Plus Jakarta Sans, sans-serif" font-size="36" fill="#9FB0C9">Sottotitolo o claim di campagna su due righe al massimo.</text>
+  <rect x="80" y="940" width="64" height="8" fill="#3B82F6"/>
+  <text x="80" y="1010" font-family="Space Mono, monospace" font-size="30" fill="#9FB0C9">@4real</text>
+  <text x="1000" y="1010" text-anchor="end" font-family="Space Mono, monospace" font-size="30" fill="#9FB0C9">4REAL.IT</text>
+</svg>
