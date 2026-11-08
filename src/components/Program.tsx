@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { CalendarDays, GraduationCap, HeartHandshake, Wifi, Check } from 'lucide-react'
+import { CalendarDays, GraduationCap, HeartHandshake, Wifi, Check, ArrowUpRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { programItems, type ProgramItem } from '../data/content'
 import SectionHeading from './ui/SectionHeading'
@@ -31,15 +31,9 @@ export default function Program() {
       <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {programItems.map((item, i) => {
           const Icon = iconMap[item.icon]
-          return (
-            <motion.article
-              key={item.title}
-              initial={reveal ? { opacity: 0, y: 32 } : false}
-              whileInView={reveal ? { opacity: 1, y: 0 } : undefined}
-              viewport={reveal ? { once: true, margin: '-60px' } : undefined}
-              transition={reveal ? { duration: 0.5, delay: i * 0.08, ease: 'easeOut' } : undefined}
-              className={`glass group relative overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow-lg ${item.span}`}
-            >
+          const clickable = !!item.href
+          const body = (
+            <>
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/15 blur-2xl transition-opacity duration-300 group-hover:opacity-100 md:opacity-0" />
 
               <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-surface-border bg-white/5 text-primary-bright shadow-glow transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
@@ -57,6 +51,34 @@ export default function Program() {
                   </li>
                 ))}
               </ul>
+
+              {item.href && (
+                <span className="mt-6 flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-primary-bright">
+                  {item.linkLabel}
+                  <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </span>
+              )}
+            </>
+          )
+          return (
+            <motion.article
+              key={item.title}
+              initial={reveal ? { opacity: 0, y: 32 } : false}
+              whileInView={reveal ? { opacity: 1, y: 0 } : undefined}
+              viewport={reveal ? { once: true, margin: '-60px' } : undefined}
+              transition={reveal ? { duration: 0.5, delay: i * 0.08, ease: 'easeOut' } : undefined}
+              className={`glass group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow-lg ${clickable ? 'cursor-pointer' : ''} ${item.span}`}
+            >
+              {clickable ? (
+                <a
+                  href={item.href}
+                  className="block h-full rounded-2xl p-7 outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                >
+                  {body}
+                </a>
+              ) : (
+                <div className="h-full p-7">{body}</div>
+              )}
             </motion.article>
           )
         })}

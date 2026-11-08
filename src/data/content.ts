@@ -38,16 +38,24 @@ export interface ProgramItem {
   description: string
   points: string[]
   span: string
+  href?: string
+  linkLabel?: string
 }
 
 export const programItems: ProgramItem[] = [
   {
-    icon: 'graduation-cap',
-    title: 'Didattica che funziona',
+    icon: 'wifi',
+    title: 'Digitalizzazione reale',
     description:
-      'Lezioni più utili, orari sensati e un dialogo costante con i docenti. La qualità dello studio viene prima di tutto.',
-    points: ['Rappresentanza reale nei consigli', 'Feedback anonimo sui corsi', 'Orari a misura di studente'],
-    span: 'md:col-span-2',
+      'Una scuola più digitale e accessibile a tutti: stessi strumenti e stesse opportunità per ogni studente. Non promesse: tre strumenti creati da studenti, già online.',
+    points: [
+      'Wi-Fi e strumenti digitali per tutti',
+      'Appunti e materiali condivisi online',
+      'Informazione studentesca indipendente',
+    ],
+    span: 'md:col-span-3',
+    href: '#/digitale',
+    linkLabel: 'Apri: i progetti già online',
   },
   {
     icon: 'calendar-days',
@@ -58,20 +66,54 @@ export const programItems: ProgramItem[] = [
     span: 'md:col-span-1',
   },
   {
-    icon: 'wifi',
-    title: 'Spazi & Digitale',
-    description:
-      'Aule studio attrezzate, Wi-Fi stabile e strumenti digitali moderni per una scuola al passo coi tempi.',
-    points: ['Wi-Fi potenziato', 'Aule studio aperte', 'App studenti unica'],
-    span: 'md:col-span-1',
-  },
-  {
     icon: 'heart-handshake',
     title: 'Trasparenza & Ascolto',
     description:
       'Ogni decisione presa vi riguarda: rendicontazione pubblica, bilancio chiaro e uno sportello sempre aperto per le vostre idee.',
-    points: ['Bilancio pubblico', 'Sportello idee aperto', 'Report mensile'],
+    points: [
+      'Bilancio pubblico',
+      'Sportello idee aperto',
+      'Report mensile',
+      'Feedback anonimo sui corsi',
+      'Rappresentanza reale nei consigli',
+      'Orari a misura di studente',
+    ],
     span: 'md:col-span-2',
+  },
+]
+
+export interface DigitalProject {
+  name: string
+  domain: string
+  url: string
+  tag: string
+  description: string
+}
+
+export const digitalProjects: DigitalProject[] = [
+  {
+    name: 'Scola-Mia',
+    domain: 'scola-mia.com',
+    url: 'https://scola-mia.com',
+    tag: 'Giornale studentesco',
+    description:
+      'Il giornale indipendente del Liceo Rocci, scritto e gestito dagli studenti: articoli in evidenza, archivio, countdown alle scadenze e agenda scolastica, con un canale WhatsApp per non perdere gli aggiornamenti.',
+  },
+  {
+    name: 'Rocci Notes',
+    domain: 'roccinotes.com',
+    url: 'https://roccinotes.com',
+    tag: 'Scambio appunti',
+    description:
+      'La piattaforma di scambio appunti tra studenti del Rocci: condividi i tuoi materiali e trova quelli delle tue classi in un posto solo, invece di inseguirli nei gruppi chat.',
+  },
+  {
+    name: 'Progetto CoSa',
+    domain: 'progettocosa.it',
+    url: 'https://progettocosa.it',
+    tag: 'Benessere & divulgazione',
+    description:
+      'Progetto nato in ambito scolastico per avvicinare i giovani a psicologia, benessere mentale e crescita personale: video e contenuti divulgativi con un linguaggio alla portata di tutti.',
   },
 ]
 
