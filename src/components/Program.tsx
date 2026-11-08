@@ -3,6 +3,7 @@ import { CalendarDays, GraduationCap, HeartHandshake, Wifi, Check } from 'lucide
 import type { LucideIcon } from 'lucide-react'
 import { programItems, type ProgramItem } from '../data/content'
 import SectionHeading from './ui/SectionHeading'
+import { isFinePointer } from '../lib/useFinePointer'
 
 const iconMap: Record<ProgramItem['icon'], LucideIcon> = {
   'graduation-cap': GraduationCap,
@@ -12,6 +13,7 @@ const iconMap: Record<ProgramItem['icon'], LucideIcon> = {
 }
 
 export default function Program() {
+  const reveal = isFinePointer()
   return (
     <section id="programma" className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-x-0 top-1/3 -z-10 mx-auto h-72 max-w-3xl rounded-full bg-primary/10 blur-[120px]" />
@@ -32,10 +34,10 @@ export default function Program() {
           return (
             <motion.article
               key={item.title}
-              initial={{ opacity: 0, y: 32 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.08, ease: 'easeOut' }}
+              initial={reveal ? { opacity: 0, y: 32 } : false}
+              whileInView={reveal ? { opacity: 1, y: 0 } : undefined}
+              viewport={reveal ? { once: true, margin: '-60px' } : undefined}
+              transition={reveal ? { duration: 0.5, delay: i * 0.08, ease: 'easeOut' } : undefined}
               className={`glass group relative overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-glow-lg ${item.span}`}
             >
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/15 blur-2xl transition-opacity duration-300 group-hover:opacity-100 md:opacity-0" />

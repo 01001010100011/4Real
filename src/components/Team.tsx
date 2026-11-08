@@ -2,7 +2,7 @@ import { useRef, type PointerEvent } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { candidates } from '../data/content'
 import SectionHeading from './ui/SectionHeading'
-import { useFinePointer } from '../lib/useFinePointer'
+import { useFinePointer, isFinePointer } from '../lib/useFinePointer'
 
 function CandidateCard({
   candidate,
@@ -13,6 +13,7 @@ function CandidateCard({
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const fine = useFinePointer()
+  const reveal = isFinePointer()
   const mx = useMotionValue(0.5)
   const my = useMotionValue(0.5)
   const rotateX = useSpring(useTransform(my, [0, 1], [10, -10]), {
@@ -45,10 +46,10 @@ function CandidateCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 36 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.55, delay: index * 0.08, ease: 'easeOut' }}
+      initial={reveal ? { opacity: 0, y: 36 } : false}
+      whileInView={reveal ? { opacity: 1, y: 0 } : undefined}
+      viewport={reveal ? { once: true, margin: '-60px' } : undefined}
+      transition={reveal ? { duration: 0.55, delay: index * 0.08, ease: 'easeOut' } : undefined}
       style={{ perspective: 900 }}
     >
       <motion.div

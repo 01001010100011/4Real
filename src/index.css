@@ -36,7 +36,8 @@
 
 @layer components {
   .glass {
-    @apply bg-surface backdrop-blur-xl border border-surface-border rounded-2xl;
+    /* niente backdrop-blur: su sfondo piatto non si vede e su mobile costa molto in scroll */
+    @apply bg-surface border border-surface-border rounded-2xl;
   }
 
   .text-gradient {

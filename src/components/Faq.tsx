@@ -3,10 +3,12 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { faqItems } from '../data/content'
 import SectionHeading from './ui/SectionHeading'
+import { isFinePointer } from '../lib/useFinePointer'
 import InteractiveBallotCard from './InteractiveBallotCard'
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const reveal = isFinePointer()
 
   return (
     <section id="faq" className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
@@ -27,10 +29,10 @@ export default function Faq() {
             return (
               <motion.div
                 key={item.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.45, delay: i * 0.06 }}
+                initial={reveal ? { opacity: 0, y: 20 } : false}
+                whileInView={reveal ? { opacity: 1, y: 0 } : undefined}
+                viewport={reveal ? { once: true, margin: '-40px' } : undefined}
+                transition={reveal ? { duration: 0.45, delay: i * 0.06 } : undefined}
                 className={`glass overflow-hidden transition-colors duration-300 ${
                   isOpen ? 'border-primary/40' : ''
                 }`}
