@@ -32,6 +32,16 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHashChange)
   }, [])
 
+  // Tornando da una pagina standalone a un'ancora della home (#programma),
+  // l'elemento esiste solo dopo il re-render: scrolliamo qui, non al click.
+  useEffect(() => {
+    if (route !== 'home') return
+    const hash = window.location.hash
+    if (!hash || hash.startsWith('#/')) return
+    const el = document.getElementById(hash.slice(1))
+    if (el) el.scrollIntoView({ block: 'start' })
+  }, [route])
+
   if (!unlocked) {
     return <AccessGate expected={expected as string} onUnlock={() => setUnlocked(true)} />
   }

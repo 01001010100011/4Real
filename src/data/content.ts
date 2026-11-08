@@ -49,9 +49,9 @@ export const programItems: ProgramItem[] = [
     description:
       'Una scuola più digitale e accessibile a tutti: stessi strumenti e stesse opportunità per ogni studente. Non promesse: tre strumenti creati da studenti, già online.',
     points: [
-      'Wi-Fi e strumenti digitali per tutti',
-      'Appunti e materiali condivisi online',
       'Informazione studentesca indipendente',
+      'Appunti e materiali condivisi online',
+      'E altri siti nati da progetti scolastici',
     ],
     span: 'md:col-span-3',
     href: '#/digitale',
