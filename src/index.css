@@ -5,6 +5,9 @@
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+    /* clip (dove supportato) evita il pan orizzontale iOS senza rompere position:sticky */
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {

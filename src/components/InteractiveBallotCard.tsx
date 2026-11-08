@@ -5,6 +5,7 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion'
+import { useFinePointer } from '../lib/useFinePointer'
 
 const CHECKBOX_SIZE = 36
 const FIRST_DRAW_DELAY = 0.6
@@ -13,6 +14,7 @@ export default function InteractiveBallotCard() {
   const [drawId, setDrawId] = useState(0)
   const [flash, setFlash] = useState(false)
   const [isFirstDraw, setIsFirstDraw] = useState(true)
+  const fine = useFinePointer()
 
   const mx = useMotionValue(0.5)
   const my = useMotionValue(0.5)
@@ -60,8 +62,8 @@ export default function InteractiveBallotCard() {
       className="w-full max-w-sm"
     >
       <motion.div
-        onPointerMove={onPointerMove}
-        onPointerLeave={onPointerLeave}
+        onPointerMove={fine ? onPointerMove : undefined}
+        onPointerLeave={fine ? onPointerLeave : undefined}
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
         className="glass relative overflow-visible p-5 shadow-glow-lg sm:p-6"
       >

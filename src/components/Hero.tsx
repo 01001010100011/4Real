@@ -21,7 +21,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="glass mb-6 rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-ice"
+            className="mb-6 rounded-full border border-surface-border bg-canvas/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-ice"
           >
             Lista studentesca · Elezioni 2026
           </motion.span>
@@ -61,7 +61,7 @@ export default function Hero() {
             </a>
             <a
               href="#programma"
-              className="glass flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-white transition-all hover:scale-105 hover:border-primary/50 hover:bg-white/10 active:scale-95"
+              className="flex items-center justify-center gap-2 rounded-full border border-surface-border bg-canvas/60 px-7 py-3.5 text-sm font-semibold text-white transition-all hover:scale-105 hover:border-primary/50 hover:bg-white/10 active:scale-95"
             >
               <FileText size={18} className="text-ice" />
               Il Programma

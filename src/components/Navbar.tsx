@@ -19,7 +19,7 @@ export default function Navbar() {
       <nav
         className={`flex w-full max-w-4xl items-center justify-between rounded-full px-5 py-3 transition-all duration-300 ${
           scrolled || open
-            ? 'border border-surface-border bg-canvas/80 backdrop-blur-xl shadow-glow-lg'
+            ? 'border border-surface-border bg-canvas/95 shadow-lg'
             : 'border border-transparent bg-transparent'
         }`}
       >
@@ -46,7 +46,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-full text-ink-muted transition-colors hover:text-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-surface-border bg-white/5 text-ink-muted transition-colors hover:text-white md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? 'Chiudi menu' : 'Apri menu'}
           aria-expanded={open}
@@ -62,7 +62,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.22, ease: 'easeOut' }}
-            className="absolute inset-x-4 top-20 glass p-4 md:hidden"
+            className="absolute inset-x-4 top-[88px] rounded-2xl border border-surface-border bg-surface-solid p-4 shadow-lg md:hidden"
           >
             {navLinks.map((link) => (
               <a

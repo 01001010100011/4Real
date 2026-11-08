@@ -2,6 +2,7 @@ import { useRef, type PointerEvent } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { candidates } from '../data/content'
 import SectionHeading from './ui/SectionHeading'
+import { useFinePointer } from '../lib/useFinePointer'
 
 function CandidateCard({
   candidate,
@@ -11,6 +12,7 @@ function CandidateCard({
   index: number
 }) {
   const ref = useRef<HTMLDivElement>(null)
+  const fine = useFinePointer()
   const mx = useMotionValue(0.5)
   const my = useMotionValue(0.5)
   const rotateX = useSpring(useTransform(my, [0, 1], [10, -10]), {
@@ -51,8 +53,8 @@ function CandidateCard({
     >
       <motion.div
         ref={ref}
-        onPointerMove={onPointerMove}
-        onPointerLeave={onPointerLeave}
+        onPointerMove={fine ? onPointerMove : undefined}
+        onPointerLeave={fine ? onPointerLeave : undefined}
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
         className="glass group relative overflow-hidden p-6 transition-colors duration-300 hover:border-primary/40"
       >
