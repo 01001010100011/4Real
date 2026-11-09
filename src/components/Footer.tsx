@@ -1,5 +1,6 @@
 import { Instagram, Facebook, Youtube, MessageCircle } from 'lucide-react'
 import { election } from '../data/content'
+import Logo from './Logo'
 
 const socials = [
   { icon: Instagram, label: 'Instagram', href: '#' },
@@ -27,8 +28,9 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="text-center">
-          <p className="font-display text-2xl font-extrabold tracking-tight">
+        <div className="flex flex-col items-center text-center">
+          <Logo className="h-12 w-12 text-primary-deep" glow />
+          <p className="mt-4 font-display text-2xl font-extrabold tracking-tight">
             4<span className="text-primary-bright">Real</span>
           </p>
           <p className="mt-2 text-xs text-ink-dim">

@@ -104,19 +104,41 @@ o rettangolo pieno.
 Lucide, stroke **1.8–2**, cap round, size 16–24px. Colore: Ghiaccio o Azzurro Vivo su dark,
 mai Blu Elettrico pieno per icone piccole (perde contrasto). Un'icona per concetto, mai coppie.
 
-## 9. Logo — badge "L4R"
+## 9. Logo — monogramma ufficiale
 
-Direzione: badge **circolare** con acronimo **L4R** (Lista 4 Real), **senza stella**, nella
-palette del sito e con i font del brand (Space Grotesk / Space Mono). Varianti di colore e di
-enfasi della "4" in valutazione con Leo. Fino alla scelta vale il wordmark provvisorio:
-"4" Bianco Puro + "Real" Blu Elettrico, Space Grotesk 700.
+Logo adottato il **09/11/2026**: il monogramma vettoriale disegnato da Leo (sorgente
+`IMG_9788.svg`, 512×512, cerchio + segno interno). La direzione precedente "badge L4R"
+è **superata**.
 
-Quando arriva il file, requisiti minimi da verificare:
-- SVG vettoriale (o PDF vettoriale), non bitmap
-- Versione a colori su dark + versione monocromatica bianca + monocromatica nera
-- Versione compatta (icona) leggibile a 32px
-- Clear space = altezza della "4" (o del segno dominante) su tutti i lati
-- Size minimo: 24px digitale, 10mm stampa
+Variante colore scelta da Leo: **6 — Blu Profondo `#1D4ED8` uniforme**, usata su tutti gli
+sfondi, compresi quelli scuri del sito. Nei contesti dark il componente applica un glow
+morbido (`drop-shadow(0 0 16px rgba(59,130,246,0.55))`) per recuperare leggibilità: è un
+effetto solo schermo, mai in stampa.
+
+### Asset
+
+| File | Uso |
+|------|-----|
+| `brand/logo-4real.svg` | Master vettoriale, viewBox ritagliato sul tracciato (`72 72 360 360`) |
+| `public/logo.svg` | Stessa forma, favicon del sito |
+| `src/components/Logo.tsx` | Componente React: `fill="currentColor"`, colore via classe Tailwind, prop `glow` |
+
+### Regole d'uso
+
+- Colore sul sito: `text-primary-deep`. Se su fondo scuro dovesse risultare poco leggibile,
+  si rivaluta con Leo una variante più chiara (Ghiaccio `#A5D8FF` o duotone anello Blu
+  Elettrico + segno Ghiaccio).
+- Clear space: un quarto del diametro del cerchio esterno, su tutti i lati.
+- Size minimo: 24px digitale, 10mm stampa.
+- Versioni monocromatiche per stampa/merch (bianca su capo scuro, nera su chiaro): da
+  derivare dal master cambiando solo il `fill`, quando servono.
+- Mai ruotare, deformare, ricolorare fuori palette o aggiungere effetti.
+
+### Applicazioni sul sito
+
+Navbar (mark + wordmark), Hero (mark sopra il badge "Lista n. 2"), Footer (mark sopra il
+wordmark), favicon. La pagina di gate resta volutamente neutra: nessun elemento
+identificativo è visibile a chi apre il link prima dello sblocco post 12/11.
 
 ## 10. Applicazioni
 
@@ -158,12 +180,12 @@ default sans (Jakarta) per il body.
 ```
 brand/
   brand-guidelines.md      ← questo documento
+  logo-4real.svg           ← master vettoriale del logo (Blu Profondo #1D4ED8)
   templates/
     ig-post-1080x1080.svg
     story-1080x1920.svg
     volantino-a5.svg
     sticker-60mm.svg
-  (qui arriverà il logo di Leo)
 ```
 
 Export SVG → PNG: `inkscape file.svg --export-type=png --export-width=2160` oppure

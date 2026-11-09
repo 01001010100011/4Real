@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Users, FileText } from 'lucide-react'
 import { isWebGLAvailable } from '../lib/webgl'
 import { election } from '../data/content'
+import Logo from './Logo'
 
 const HeroScene = lazy(() => import('./three/HeroScene'))
 
@@ -18,11 +19,19 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 text-center lg:grid-cols-2 lg:gap-16 lg:text-left">
         <div className="flex flex-col items-center lg:items-start">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
+            <Logo className="h-16 w-16 text-primary-deep sm:h-20 sm:w-20" glow />
+          </motion.div>
+
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 rounded-full border border-surface-border bg-canvas/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-ice"
+            className="mb-6 mt-6 rounded-full border border-surface-border bg-canvas/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-ice"
           >
             Lista n. {election.listNumber} · Elezioni {election.year}
           </motion.span>

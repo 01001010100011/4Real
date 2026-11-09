@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { navLinks } from '../data/content'
+import Logo from './Logo'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -23,7 +24,11 @@ export default function Navbar() {
             : 'border border-transparent bg-transparent'
         }`}
       >
-        <a href="#top" className="font-display text-lg font-extrabold tracking-tight">
+        <a
+          href="#top"
+          className="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight"
+        >
+          <Logo className="h-7 w-7 text-primary-deep" glow />
           4<span className="text-primary-bright">Real</span>
         </a>
 
