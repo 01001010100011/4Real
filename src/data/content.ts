@@ -175,14 +175,14 @@ export const faqItems: FaqItem[] = [
       'Siamo quattro studenti candidati per rappresentarvi davvero: niente promesse vaghe, solo impegni concreti e verificabili durante tutto il mandato.',
   },
   {
-    question: 'Come posso proporre un\'idea?',
+    question: 'Come posso proporvi un\'idea?',
     answer:
-      'Scrivici sui nostri canali social o passa dallo sportello idee: ogni proposta viene discussa in riunione e riceve una risposta pubblica entro due settimane.',
+      'I nostri siti web nascono proprio con questo obiettivo: creare un canale di comunicazione diretto tra gli studenti e la rappresentanza d\'istituto per condividere segnalazioni, proposte e idee. Superiamo il classico passaggio intermediato dai rappresentanti di classe per raggiungere in modo immediato, chiaro e trasparente l\'intera comunità studentesca.',
   },
   {
     question: 'Cosa succede dopo le elezioni?',
     answer:
-      'Pubblichiamo un report mensile con lo stato di avanzamento di ogni punto del programma. Se qualcosa non funziona, lo diciamo apertamente e lo sistemiamo.',
+      'Se sceglierete di darci fiducia, ci impegneremo a portare avanti il nostro programma con la massima trasparenza, chiarezza e puntualità, mantenendo un dialogo sempre aperto e lucido. E cercheremo VERAMENTE di risolvere tutte le problematiche da voi esposte.',
   },
   {
     question: 'Posso unirmi al gruppo di lavoro?',
