@@ -24,12 +24,8 @@ export default function Navbar() {
             : 'border border-transparent bg-transparent'
         }`}
       >
-        <a
-          href="#top"
-          className="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight"
-        >
-          <Logo className="h-7 w-7 text-primary-deep" glow />
-          4<span className="text-primary-bright">Real</span>
+        <a href="#top" aria-label="4Real — torna in cima" className="flex items-center">
+          <Logo className="h-8 w-8 text-primary-deep" glow />
         </a>
 
         <div className="hidden items-center gap-7 md:flex">

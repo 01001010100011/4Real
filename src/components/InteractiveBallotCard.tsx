@@ -6,6 +6,7 @@ import {
   useTransform,
 } from 'framer-motion'
 import { useFinePointer } from '../lib/useFinePointer'
+import Logo from './Logo'
 import { election } from '../data/content'
 
 const CHECKBOX_SIZE = 36
@@ -77,13 +78,16 @@ export default function InteractiveBallotCard() {
 
         {/* Intestazione */}
         <div className="relative flex items-start justify-between gap-4">
-          <div>
-            <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-ink-muted sm:text-[11px]">
-              Scheda Elettorale
-            </p>
-            <p className="mt-1 text-[11px] text-ink-dim sm:text-xs">
-              {election.body} · a.s. {election.year}
-            </p>
+          <div className="flex items-center gap-3">
+            <Logo className="h-10 w-10 shrink-0 text-primary-deep" glow />
+            <div>
+              <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-ink-muted sm:text-[11px]">
+                Scheda Elettorale
+              </p>
+              <p className="mt-1 text-[11px] text-ink-dim sm:text-xs">
+                {election.body} · a.s. {election.year}
+              </p>
+            </div>
           </div>
           <span className="font-mono text-sm font-bold text-primary-bright sm:text-base">
             {new Date().getFullYear()}
@@ -160,7 +164,7 @@ export default function InteractiveBallotCard() {
                 Lista {election.listNumber}
               </p>
               <p className="font-display mt-0.5 truncate text-2xl font-extrabold tracking-tight sm:text-3xl">
-                4<span className="text-primary-bright">Real</span>
+                4<span className="text-primary-deep">Real</span>
               </p>
               <p className="mt-1 text-[11px] leading-snug text-ink-muted sm:text-xs">
                 Concretezza · Trasparenza · Rappresentanza reale

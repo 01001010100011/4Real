@@ -29,10 +29,12 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center text-center">
-          <Logo className="h-12 w-12 text-primary-deep" glow />
-          <p className="mt-4 font-display text-2xl font-extrabold tracking-tight">
-            4<span className="text-primary-bright">Real</span>
-          </p>
+          <div className="flex items-center gap-4">
+            <Logo className="h-11 w-11 text-primary-deep" glow />
+            <p className="font-display text-2xl font-extrabold tracking-tight">
+              4<span className="text-primary-deep">Real</span>
+            </p>
+          </div>
           <p className="mt-2 text-xs text-ink-dim">
             Concretezza · Trasparenza · Rappresentanza reale
           </p>
