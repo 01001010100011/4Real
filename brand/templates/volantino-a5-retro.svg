@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 216" width="154mm" height="216mm" role="img" aria-labelledby="t">
+  <title id="t">4Real — volantino A5 retro (programma in sette temi + QR)</title>
+  <rect width="154" height="216" fill="#04070F"/>
+  <rect x="3" y="3" width="148" height="210" fill="none" stroke="#64748B" stroke-width="0.3" stroke-dasharray="2 2" opacity="0.5"/>
+  <g stroke="#3B82F6" stroke-width="0.4" opacity="0.14">
+    <path d="M118 3 L151 36"/><path d="M128 3 L151 26"/><path d="M138 3 L151 16"/>
+  </g>
+
+  <g transform="translate(14,10) scale(0.0333333) translate(-72,440) scale(0.1,-0.1)" fill="#A5D8FF">
+    <path d="M2385 4329 c-677 -52 -1284 -522 -1508 -1166 -157 -450 -117 -974 105 -1383 361 -665 1089 -1025 1828 -903 686 112 1264 658 1414 1333 127 579 -34 1157 -443 1583 -249 259 -540 424 -882 501 -100 22 -333 49 -393 45 -12 -1 -66 -5 -121 -10z m286 -249 c590 -60 1086 -457 1273 -1020 61 -185 71 -251 70 -475 0 -170 -3 -214 -22 -294 -75 -315 -212 -555 -445 -777 -391 -375 -950 -504 -1464 -338 -114 36 -305 133 -408 205 -110 79 -271 238 -348 346 -110 155 -189 323 -237 508 -107 411 -28 838 223 1210 86 126 256 293 391 383 129 87 188 117 320 167 213 79 425 107 647 85z"/>
+    <path d="M2364 3940 c-239 -34 -488 -136 -686 -282 -134 -98 -289 -263 -372 -397 -31 -48 -23 -46 49 15 212 179 556 344 845 405 152 32 373 33 485 1 134 -38 210 -95 262 -195 22 -42 27 -65 27 -122 0 -126 -66 -226 -214 -323 -47 -31 -395 -246 -773 -477 l-686 -420 685 -3 684 -2 0 -477 0 -478 144 144 144 144 -1 334 -2 333 345 0 346 0 131 123 131 122 -473 3 -472 2 -5 200 c-2 110 -7 202 -9 205 -3 3 -67 -32 -142 -77 l-137 -83 0 -122 0 -123 -247 0 c-146 0 -243 4 -237 9 8 8 579 354 824 500 108 64 213 162 252 237 77 143 77 327 2 477 -41 80 -153 184 -254 235 -132 66 -254 93 -435 97 -82 2 -177 0 -211 -5z"/>
+    <path d="M1703 3393 l-143 -86 0 -468 c0 -296 4 -469 10 -469 5 0 70 37 145 82 l135 82 0 473 c0 260 -1 473 -2 473 -2 -1 -67 -40 -145 -87z"/>
+    <path d="M1610 2095 c0 -31 105 -310 154 -410 61 -123 204 -354 191 -309 -3 11 -18 99 -34 195 -26 157 -38 249 -57 462 l-6 67 -124 0 c-68 0 -124 -2 -124 -5z"/>
+  </g>
+  <text x="30" y="17" font-family="Space Mono, monospace" font-size="3.6" font-weight="700" letter-spacing="1.1" fill="#A5D8FF">IL PROGRAMMA · LISTA N. 2</text>
+  <text x="14" y="34" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF">Sette temi, azioni concrete</text>
+
+  <g font-family="Plus Jakarta Sans, sans-serif">
+    <text x="14" y="48" font-family="Space Mono, monospace" font-size="4" font-weight="700" fill="#5B9CFF">01</text>
+    <text x="23" y="48" font-family="Space Grotesk, sans-serif" font-size="5.4" font-weight="700" fill="#FFFFFF">Digitalizzazione reale</text>
+    <text x="23" y="54" font-size="3.8" fill="#9FB0C9">Stessi strumenti e stesse opportunità per ogni studente.</text>
+
+    <text x="14" y="68" font-family="Space Mono, monospace" font-size="4" font-weight="700" fill="#5B9CFF">02</text>
+    <text x="23" y="68" font-family="Space Grotesk, sans-serif" font-size="5.4" font-weight="700" fill="#FFFFFF">Cogestione &amp; assemblee vive</text>
+    <text x="23" y="74" font-size="3.8" fill="#9FB0C9">Assemblee tematiche, dibattiti, workshop con esperti esterni.</text>
+
+    <text x="14" y="88" font-family="Space Mono, monospace" font-size="4" font-weight="700" fill="#5B9CFF">03</text>
+    <text x="23" y="88" font-family="Space Grotesk, sans-serif" font-size="5.4" font-weight="700" fill="#FFFFFF">Sport &amp; tornei d'istituto</text>
+    <text x="23" y="94" font-size="3.8" fill="#9FB0C9">Tornei tutto l'anno e Giornata dello Sport con altre scuole.</text>
+
+    <text x="14" y="108" font-family="Space Mono, monospace" font-size="4" font-weight="700" fill="#5B9CFF">04</text>
+    <text x="23" y="108" font-family="Space Grotesk, sans-serif" font-size="5.4" font-weight="700" fill="#FFFFFF">Festa di fine anno</text>
+    <text x="23" y="114" font-size="3.8" fill="#9FB0C9">In orario scolastico, organizzata con voi, aperta a tutti.</text>
+
+    <text x="14" y="128" font-family="Space Mono, monospace" font-size="4" font-weight="700" fill="#5B9CFF">05</text>
+    <text x="23" y="128" font-family="Space Grotesk, sans-serif" font-size="5.4" font-weight="700" fill="#FFFFFF">Annuario d'Istituto</text>
+    <text x="23" y="134" font-size="3.8" fill="#9FB0C9">I tuoi ricordi stampati bene: costo indicativo 5–10€.</text>
+
+    <text x="14" y="148" font-family="Space Mono, monospace" font-size="4" font-weight="700" fill="#5B9CFF">06</text>
+    <text x="23" y="148" font-family="Space Grotesk, sans-serif" font-size="5.4" font-weight="700" fill="#FFFFFF">Box di San Valentino</text>
+    <text x="23" y="154" font-size="3.8" fill="#9FB0C9">Form online e consegna anonima: nessuno sa niente.</text>
+
+    <text x="14" y="168" font-family="Space Mono, monospace" font-size="4" font-weight="700" fill="#5B9CFF">07</text>
+    <text x="23" y="168" font-family="Space Grotesk, sans-serif" font-size="5.4" font-weight="700" fill="#FFFFFF">Rocci's Got Talent</text>
+    <text x="23" y="174" font-size="3.8" fill="#9FB0C9">Il palco è vostro: musica, ballo, comicità, voto del pubblico.</text>
+  </g>
+
+  <rect x="14" y="184" width="22" height="22" fill="#FFFFFF"/>
+  <g transform="translate(16,186) scale(0.72)" fill="#04070F">
+    <path d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM8 0h1v1h-1zM9 0h1v1h-1zM10 0h1v1h-1zM11 0h1v1h-1zM13 0h1v1h-1zM16 0h1v1h-1zM18 0h1v1h-1zM19 0h1v1h-1zM20 0h1v1h-1zM21 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM11 1h1v1h-1zM16 1h1v1h-1zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM9 2h1v1h-1zM10 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM13 2h1v1h-1zM16 2h1v1h-1zM18 2h1v1h-1zM20 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM13 3h1v1h-1zM15 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM9 4h1v1h-1zM10 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM14 5h1v1h-1zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM19 6h1v1h-1zM20 6h1v1h-1zM21 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM8 7h1v1h-1zM9 7h1v1h-1zM10 7h1v1h-1zM11 7h1v1h-1zM12 7h1v1h-1zM14 7h1v1h-1zM16 7h1v1h-1zM0 8h1v1h-1zM2 8h1v1h-1zM3 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM9 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM21 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM1 9h1v1h-1zM4 9h1v1h-1zM9 9h1v1h-1zM10 9h1v1h-1zM12 9h1v1h-1zM13 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM23 9h1v1h-1zM1 10h1v1h-1zM6 10h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM17 10h1v1h-1zM18 10h1v1h-1zM20 10h1v1h-1zM0 11h1v1h-1zM2 11h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM7 11h1v1h-1zM8 11h1v1h-1zM9 11h1v1h-1zM11 11h1v1h-1zM13 11h1v1h-1zM14 11h1v1h-1zM15 11h1v1h-1zM16 11h1v1h-1zM17 11h1v1h-1zM20 11h1v1h-1zM21 11h1v1h-1zM22 11h1v1h-1zM1 12h1v1h-1zM6 12h1v1h-1zM8 12h1v1h-1zM9 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM13 12h1v1h-1zM14 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM20 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM24 12h1v1h-1zM1 13h1v1h-1zM3 13h1v1h-1zM4 13h1v1h-1zM5 13h1v1h-1zM10 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM18 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM24 13h1v1h-1zM1 14h1v1h-1zM2 14h1v1h-1zM3 14h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM11 14h1v1h-1zM14 14h1v1h-1zM16 14h1v1h-1zM20 14h1v1h-1zM22 14h1v1h-1zM23 14h1v1h-1zM0 15h1v1h-1zM3 15h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM10 15h1v1h-1zM11 15h1v1h-1zM15 15h1v1h-1zM16 15h1v1h-1zM17 15h1v1h-1zM19 15h1v1h-1zM20 15h1v1h-1zM24 15h1v1h-1zM2 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM13 16h1v1h-1zM16 16h1v1h-1zM17 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM21 16h1v1h-1zM22 16h1v1h-1zM23 16h1v1h-1zM24 16h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM15 17h1v1h-1zM16 17h1v1h-1zM20 17h1v1h-1zM22 17h1v1h-1zM24 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM14 18h1v1h-1zM16 18h1v1h-1zM18 18h1v1h-1zM20 18h1v1h-1zM22 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM0 19h1v1h-1zM6 19h1v1h-1zM8 19h1v1h-1zM10 19h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM14 19h1v1h-1zM16 19h1v1h-1zM20 19h1v1h-1zM0 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM4 20h1v1h-1zM6 20h1v1h-1zM9 20h1v1h-1zM14 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM20 20h1v1h-1zM21 20h1v1h-1zM24 20h1v1h-1zM0 21h1v1h-1zM2 21h1v1h-1zM3 21h1v1h-1zM4 21h1v1h-1zM6 21h1v1h-1zM8 21h1v1h-1zM11 21h1v1h-1zM13 21h1v1h-1zM17 21h1v1h-1zM18 21h1v1h-1zM20 21h1v1h-1zM21 21h1v1h-1zM22 21h1v1h-1zM23 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM8 22h1v1h-1zM9 22h1v1h-1zM11 22h1v1h-1zM14 22h1v1h-1zM18 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM23 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM10 23h1v1h-1zM11 23h1v1h-1zM12 23h1v1h-1zM13 23h1v1h-1zM14 23h1v1h-1zM17 23h1v1h-1zM20 23h1v1h-1zM22 23h1v1h-1zM0 24h1v1h-1zM1 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM10 24h1v1h-1zM11 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM14 24h1v1h-1zM18 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM21 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM24 24h1v1h-1z"/>
+  </g>
+  <text x="40" y="193" font-family="Space Mono, monospace" font-size="4.4" font-weight="700" fill="#5B9CFF">lista4real.online</text>
+  <text x="40" y="200" font-family="Plus Jakarta Sans, sans-serif" font-size="3.8" fill="#9FB0C9">Per una scuola che ci rappresenta</text>
+  <text x="40" y="205.5" font-family="Plus Jakarta Sans, sans-serif" font-size="3.8" fill="#9FB0C9">veramente. · Lista n. 2</text>
+  <!-- versione monocromatica per fotocopie: tutti i fill/stroke #000 su fondo #FFF -->
+</svg>

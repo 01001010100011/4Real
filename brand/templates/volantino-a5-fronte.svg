@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 216" width="154mm" height="216mm" role="img" aria-labelledby="t">
+  <title id="t">4Real — volantino A5 fronte (logo, nome lista, motto)</title>
+  <!-- A5 148x210 + abbondanza 3mm: area sicura entro il tratteggio -->
+  <rect width="154" height="216" fill="#04070F"/>
+  <rect x="3" y="3" width="148" height="210" fill="none" stroke="#64748B" stroke-width="0.3" stroke-dasharray="2 2" opacity="0.5"/>
+  <g stroke="#3B82F6" stroke-width="0.4" opacity="0.14">
+    <path d="M96 213 L151 158"/><path d="M106 213 L151 168"/><path d="M116 213 L151 178"/>
+    <path d="M126 213 L151 188"/><path d="M136 213 L151 198"/><path d="M146 213 L151 208"/>
+  </g>
+
+  <!-- Logo (versione stampa Ghiaccio su fondo scuro) -->
+  <g transform="translate(14,14) scale(0.0666667) translate(-72,440) scale(0.1,-0.1)" fill="#A5D8FF">
+    <path d="M2385 4329 c-677 -52 -1284 -522 -1508 -1166 -157 -450 -117 -974 105 -1383 361 -665 1089 -1025 1828 -903 686 112 1264 658 1414 1333 127 579 -34 1157 -443 1583 -249 259 -540 424 -882 501 -100 22 -333 49 -393 45 -12 -1 -66 -5 -121 -10z m286 -249 c590 -60 1086 -457 1273 -1020 61 -185 71 -251 70 -475 0 -170 -3 -214 -22 -294 -75 -315 -212 -555 -445 -777 -391 -375 -950 -504 -1464 -338 -114 36 -305 133 -408 205 -110 79 -271 238 -348 346 -110 155 -189 323 -237 508 -107 411 -28 838 223 1210 86 126 256 293 391 383 129 87 188 117 320 167 213 79 425 107 647 85z"/>
+    <path d="M2364 3940 c-239 -34 -488 -136 -686 -282 -134 -98 -289 -263 -372 -397 -31 -48 -23 -46 49 15 212 179 556 344 845 405 152 32 373 33 485 1 134 -38 210 -95 262 -195 22 -42 27 -65 27 -122 0 -126 -66 -226 -214 -323 -47 -31 -395 -246 -773 -477 l-686 -420 685 -3 684 -2 0 -477 0 -478 144 144 144 144 -1 334 -2 333 345 0 346 0 131 123 131 122 -473 3 -472 2 -5 200 c-2 110 -7 202 -9 205 -3 3 -67 -32 -142 -77 l-137 -83 0 -122 0 -123 -247 0 c-146 0 -243 4 -237 9 8 8 579 354 824 500 108 64 213 162 252 237 77 143 77 327 2 477 -41 80 -153 184 -254 235 -132 66 -254 93 -435 97 -82 2 -177 0 -211 -5z"/>
+    <path d="M1703 3393 l-143 -86 0 -468 c0 -296 4 -469 10 -469 5 0 70 37 145 82 l135 82 0 473 c0 260 -1 473 -2 473 -2 -1 -67 -40 -145 -87z"/>
+    <path d="M1610 2095 c0 -31 105 -310 154 -410 61 -123 204 -354 191 -309 -3 11 -18 99 -34 195 -26 157 -38 249 -57 462 l-6 67 -124 0 c-68 0 -124 -2 -124 -5z"/>
+  </g>
+
+  <text x="14" y="54" font-family="Space Mono, monospace" font-size="3.4" font-weight="700" letter-spacing="0.7" fill="#A5D8FF">LISTA N. 2 · CONSIGLIO DI ISTITUTO 2026/2027</text>
+
+  <text x="14" y="88" font-family="Space Grotesk, sans-serif" font-size="30" font-weight="700"><tspan fill="#FFFFFF">4</tspan><tspan fill="#5B9CFF">Real</tspan></text>
+
+  <text x="14" y="110" font-family="Plus Jakarta Sans, sans-serif" font-size="9.5" font-weight="600" fill="#A5D8FF">Per una scuola che ci</text>
+  <text x="14" y="122" font-family="Plus Jakarta Sans, sans-serif" font-size="9.5" font-weight="600" fill="#A5D8FF">rappresenta veramente.</text>
+
+  <rect x="14" y="140" width="13" height="13" rx="1.5" fill="none" stroke="#A5D8FF" stroke-width="1.2"/>
+  <g fill="none" stroke="#A5D8FF" stroke-width="1.6" stroke-linecap="round">
+    <path d="M17 143 L24 150"/><path d="M24 143 L17 150"/>
+  </g>
+  <text x="33" y="147" font-family="Space Grotesk, sans-serif" font-size="7" font-weight="700" fill="#FFFFFF">Metti una X.</text>
+  <text x="33" y="154" font-family="Plus Jakarta Sans, sans-serif" font-size="4.6" fill="#9FB0C9">Al resto ci pensiamo noi.</text>
+
+  <text x="14" y="200" font-family="Space Mono, monospace" font-size="4.4" font-weight="700" fill="#5B9CFF">lista4real.online</text>
+  <text x="14" y="207" font-family="Plus Jakarta Sans, sans-serif" font-size="3.8" fill="#9FB0C9">Liceo Statale «L. Rocci» · Fara in Sabina</text>
+  <!-- versione monocromatica per fotocopie: tutti i fill/stroke #000 su fondo #FFF -->
+</svg>

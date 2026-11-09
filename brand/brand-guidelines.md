@@ -154,11 +154,18 @@ righe diagonali in basso a destra · handle `@4real` in basso. Fondo Nero Reale,
 
 ### Stampa
 
-- **Volantini A5** (148×210mm) + abbondanza 3mm, 300dpi: fronte claim di campagna + X,
-  retro punti programma in bullet + QR al sito. Template `templates/volantino-a5.svg`.
-  Per fotocopie in B/N: versione monocromatica nera su bianco.
-- **Sticker**: cerchio 60mm o quadrato 55mm raggio 8mm, fustella con 2mm di margine;
-  template `templates/sticker-60mm.svg`. Versione full-color e versione 1 colore Ghiaccio.
+- **Volantini A5** (148×210mm) + abbondanza 3mm, 300dpi, fronte/retro:
+  - fronte `templates/volantino-a5-fronte.svg` — logo (versione Ghiaccio), nome lista,
+    motto ufficiale, casella con X e sito;
+  - retro `templates/volantino-a5-retro.svg` — i sette temi del programma numerati,
+    uno per riga, con QR reale puntato a lista4real.online già incorporato.
+  Per fotocopie in B/N: versione monocromatica nera su bianco (commento in fondo ai file).
+- **Sticker tondi 60mm**, fustella con 2mm di margine:
+  - `templates/sticker-60mm-logo.svg` — solo logo Ghiaccio su fondo Nero Reale;
+  - `templates/sticker-60mm-vota.svg` — fondo Blu Elettrico, casella con X, "VOTA LISTA 2",
+    logo bianco: è la versione d'urto per il giorno del voto.
+- Logo in stampa: mai la versione Blu Profondo su fondo scuro (troppo poco contrasto);
+  su scuro si usa Ghiaccio `#A5D8FF`, su blu o chiaro si usa bianco.
 - Regola generale stampa: niente glow/blur (sono effetti schermo); sostituirli con
   retini o righe diagonali.
 
@@ -184,8 +191,10 @@ brand/
   templates/
     ig-post-1080x1080.svg
     story-1080x1920.svg
-    volantino-a5.svg
-    sticker-60mm.svg
+    volantino-a5-fronte.svg
+    volantino-a5-retro.svg
+    sticker-60mm-logo.svg
+    sticker-60mm-vota.svg
 ```
 
 Export SVG → PNG: `inkscape file.svg --export-type=png --export-width=2160` oppure
