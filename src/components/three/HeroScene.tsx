@@ -44,14 +44,18 @@ function makeBallotTexture(): THREE.CanvasTexture {
     ctx.fillRect(108, 70 + i * 14, i % 2 === 0 ? 118 : 88, 7)
   }
 
+  ctx.fillStyle = '#3B82F6'
+  ctx.font = 'bold 20px sans-serif'
+  ctx.fillText('LISTA 2', 30, 172)
+
   ctx.fillStyle = '#1D4ED8'
   ctx.font = 'bold 44px sans-serif'
-  ctx.fillText('4Real', 30, 200)
+  ctx.fillText('4Real', 30, 210)
 
   ctx.fillStyle = '#64748B'
-  ctx.fillRect(30, 224, 190, 6)
-  ctx.fillRect(30, 242, 150, 6)
-  ctx.fillRect(30, 260, 175, 6)
+  ctx.fillRect(30, 232, 190, 6)
+  ctx.fillRect(30, 250, 150, 6)
+  ctx.fillRect(30, 268, 175, 6)
 
   const texture = new THREE.CanvasTexture(canvas)
   texture.anisotropy = 4

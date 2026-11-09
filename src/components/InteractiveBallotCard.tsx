@@ -156,8 +156,8 @@ export default function InteractiveBallotCard() {
 
             {/* Dicitura lista */}
             <div className="min-w-0">
-              <p className="font-mono text-[9px] font-bold uppercase tracking-[0.35em] text-ink-dim sm:text-[10px]">
-                Lista n. {election.listNumber}
+              <p className="font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-ice sm:text-xs">
+                Lista {election.listNumber}
               </p>
               <p className="font-display mt-0.5 truncate text-2xl font-extrabold tracking-tight sm:text-3xl">
                 4<span className="text-primary-bright">Real</span>
