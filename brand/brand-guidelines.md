@@ -13,6 +13,10 @@ dark, geometrico, diretto. Mood: "verbale elettorale incontrano design tech".
 
 Valori in ordine di priorità: concretezza → trasparenza → rappresentanza.
 
+**Dati ufficiali (circolare Prot. 0012355 del 09/11/2026):** lista **n. II**, elezioni rappresentanti
+degli studenti nel **Consiglio di Istituto**, a.s. **2026/2027** — Liceo Statale "L. Rocci",
+Fara in Sabina (RI). Candidati, motto e liste avversarie in §13.
+
 ## 2. Palette
 
 | Ruolo            | Nome          | Hex       | Uso                                        | Quota |
@@ -59,6 +63,7 @@ Regole:
 | Tipo                  | Claim                                              | Dove                                   |
 |-----------------------|----------------------------------------------------|----------------------------------------|
 | Payoff istituzionale  | "Concretezza, trasparenza, rappresentanza reale."  | Sito, documenti, intestazioni          |
+| Motto ufficiale (circolare) | "Per una scuola che ci rappresenta veramente." | Hero sito, documenti, lista n. II |
 | Claim di campagna     | "Metti una X. Al resto ci pensiamo noi."           | Social, poster, sticker, scheda        |
 
 Se un claim cambia, si aggiorna questa tabella + `src/data/content.ts` + i template.
@@ -99,10 +104,12 @@ o rettangolo pieno.
 Lucide, stroke **1.8–2**, cap round, size 16–24px. Colore: Ghiaccio o Azzurro Vivo su dark,
 mai Blu Elettrico pieno per icone piccole (perde contrasto). Un'icona per concetto, mai coppie.
 
-## 9. Logo — IN ATTESA DEL FILE DI LEO
+## 9. Logo — badge "L4R"
 
-Il logo sarà fornito da Leo e implementato ovunque (sito, social, stampa). Fino ad allora
-vale il wordmark testuale provvisorio: "4" Bianco Puro + "Real" Blu Elettrico, Space Grotesk 700.
+Direzione: badge **circolare** con acronimo **L4R** (Lista 4 Real), **senza stella**, nella
+palette del sito e con i font del brand (Space Grotesk / Space Mono). Varianti di colore e di
+enfasi della "4" in valutazione con Leo. Fino alla scelta vale il wordmark provvisorio:
+"4" Bianco Puro + "Real" Blu Elettrico, Space Grotesk 700.
 
 Quando arriva il file, requisiti minimi da verificare:
 - SVG vettoriale (o PDF vettoriale), non bitmap
@@ -171,3 +178,44 @@ convertitore online. Per la stampa consegnare sempre anche PDF vettoriale.
 - ❌ Foto a colori pieni (finché non esiste la regola duotone applicata)
 - ❌ Più di un elemento diagonale/taglio per composizione
 - ❌ Logo stiracchiato, ricolorato a mano o con effetti aggiunti
+
+## 13. Dati elettorali ufficiali e avversari
+
+Fonte: circolare **Prot. 0012355 del 09/11/2026** — Liceo Statale "L. Rocci", Fara in Sabina (RI).
+Elezioni rappresentanti degli studenti nel **Consiglio di Istituto**, a.s. **2026/2027**.
+
+### La nostra lista — N. II
+
+Motto ufficiale: **"PER UNA SCUOLA CHE CI RAPPRESENTA VERAMENTE"** (4 REAL).
+
+Candidati in ordine ufficiale, con classe:
+
+1. Riello Leonardo — 4CS
+2. Fantozzi Federica — 4AS
+3. Millesimi Elena — 4CS
+4. Ricci Simone — 4BL
+
+### Avversari (liste concorrenti) — USO INTERNO
+
+> Sezione di lavoro per strategia e confronti. **Non pubblicare questi nominativi sul sito**
+> e non usarli in materiali pubblici: sono dati della circolare, non contenuti di campagna.
+
+**Lista N. I — "NEW GENESIS"**
+
+1. Gutu Ivan — 4AS
+2. Fronzetti Caterina — 4BS
+3. Delle Fave Alessia — 4BS
+4. Greco Giulio — 4BS
+
+**Lista N. III — "TUTTI PROTAGONISTI NON SOLO STUDENTI"**
+
+1. Gironi Ludovica — 4CS
+2. Coccia Anna — 4CS
+3. De Angelis Christian — 5AS
+4. Luci Daniele — 5AS
+
+### Vincolo di propaganda
+
+Nessuna propaganda prima della presentazione delle liste all'assemblea di istituto di
+**giovedì 12 novembre 2026**, a pena di esclusione. Fino ad allora il sito resta protetto
+dal gate membri.

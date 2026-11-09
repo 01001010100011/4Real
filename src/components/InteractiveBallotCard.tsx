@@ -6,6 +6,7 @@ import {
   useTransform,
 } from 'framer-motion'
 import { useFinePointer } from '../lib/useFinePointer'
+import { election } from '../data/content'
 
 const CHECKBOX_SIZE = 36
 const FIRST_DRAW_DELAY = 0.6
@@ -81,7 +82,7 @@ export default function InteractiveBallotCard() {
               Scheda Elettorale
             </p>
             <p className="mt-1 text-[11px] text-ink-dim sm:text-xs">
-              Istituto Superiore · Consulta Studentesca
+              {election.body} · a.s. {election.year}
             </p>
           </div>
           <span className="font-mono text-sm font-bold text-primary-bright sm:text-base">
@@ -156,7 +157,7 @@ export default function InteractiveBallotCard() {
             {/* Dicitura lista */}
             <div className="min-w-0">
               <p className="font-mono text-[9px] font-bold uppercase tracking-[0.35em] text-ink-dim sm:text-[10px]">
-                Lista
+                Lista n. {election.listNumber}
               </p>
               <p className="font-display mt-0.5 truncate text-2xl font-extrabold tracking-tight sm:text-3xl">
                 4<span className="text-primary-bright">Real</span>

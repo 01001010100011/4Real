@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube, MessageCircle } from 'lucide-react'
+import { election } from '../data/content'
 
 const socials = [
   { icon: Instagram, label: 'Instagram', href: '#' },
@@ -36,7 +37,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs text-ink-dim">
-          © {new Date().getFullYear()} 4Real — Lista studentesca. Tutti i diritti riservati.
+          © {new Date().getFullYear()} 4Real — Lista n. {election.listNumber} · {election.body} {election.year}. Tutti i diritti riservati.
         </p>
       </div>
     </footer>

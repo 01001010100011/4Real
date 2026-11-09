@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, Users, FileText } from 'lucide-react'
 import { isWebGLAvailable } from '../lib/webgl'
+import { election } from '../data/content'
 
 const HeroScene = lazy(() => import('./three/HeroScene'))
 
@@ -23,7 +24,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="mb-6 rounded-full border border-surface-border bg-canvas/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-ice"
           >
-            Lista studentesca · Elezioni 2026
+            Lista n. {election.listNumber} · Elezioni {election.year}
           </motion.span>
 
           <motion.h1
@@ -42,7 +43,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted sm:text-xl"
           >
-            Concretezza, trasparenza, rappresentanza reale.
+            {election.motto}.
             <br className="hidden sm:block" /> Quattro studenti, un solo impegno: la vostra voce.
           </motion.p>
 

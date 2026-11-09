@@ -79,6 +79,12 @@ function CandidateCard({
           {candidate.name}
         </h3>
         <p
+          className="mt-1 text-center font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-ice"
+          style={{ transform: 'translateZ(20px)' }}
+        >
+          {candidate.classe}
+        </p>
+        <p
           className="mt-1.5 text-center text-sm leading-relaxed text-ink-muted"
           style={{ transform: 'translateZ(16px)' }}
         >

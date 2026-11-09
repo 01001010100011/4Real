@@ -3,6 +3,14 @@ export interface Candidate {
   role: string
   tag: string
   initials: string
+  classe: string
+}
+
+export const election = {
+  body: 'Consiglio di Istituto',
+  year: '2026/2027',
+  listNumber: 2,
+  motto: 'Per una scuola che ci rappresenta veramente',
 }
 
 export const candidates: Candidate[] = [
@@ -11,24 +19,28 @@ export const candidates: Candidate[] = [
     role: 'Coordinatore · Voce degli studenti',
     tag: '#Concretezza',
     initials: 'LR',
+    classe: '4CS',
   },
   {
     name: 'Federica Fantozzi',
     role: 'Eventi & Vita studentesca',
     tag: '#Energia',
     initials: 'FF',
+    classe: '4AS',
   },
   {
     name: 'Elena Millesimi',
     role: 'Diritto allo studio & Servizi',
     tag: '#Trasparenza',
     initials: 'EM',
+    classe: '4CS',
   },
   {
     name: 'Simone Ricci',
     role: 'Strutture & Innovazione digitale',
     tag: '#Futuro',
     initials: 'SR',
+    classe: '4BL',
   },
 ]
 
