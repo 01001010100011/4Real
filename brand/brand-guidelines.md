@@ -160,12 +160,17 @@ righe diagonali in basso a destra · handle `@4real` in basso. Fondo Nero Reale,
   - retro `templates/volantino-a5-retro.svg` — i sette temi del programma numerati,
     uno per riga, con QR reale puntato a lista4real.online già incorporato.
   Per fotocopie in B/N: versione monocromatica nera su bianco (commento in fondo ai file).
-- **Sticker tondi 60mm**, fustella con 2mm di margine:
-  - `templates/sticker-60mm-logo.svg` — solo logo Ghiaccio su fondo Nero Reale;
-  - `templates/sticker-60mm-vota.svg` — fondo Blu Elettrico, casella con X, "VOTA LISTA 2",
-    logo bianco: è la versione d'urto per il giorno del voto.
-- Logo in stampa: mai la versione Blu Profondo su fondo scuro (troppo poco contrasto);
-  su scuro si usa Ghiaccio `#A5D8FF`, su blu o chiaro si usa bianco.
+- **QR code** `brand/qr-lista4real.svg` — punta a lista4real.online, generato con
+  correzione d'errore H e logo Blu Profondo al centro (copre ~9% della superficie,
+  dentro la tolleranza del 30%). Lo stesso QR con logo è incorporato nel retro del
+  volantino e nello sticker QR.
+- **Sticker tondi 60mm**, fustella con 2mm di margine, fondo bianco:
+  - `templates/sticker-60mm-logo.svg` — solo logo Blu Profondo a tutta area;
+  - `templates/sticker-60mm-vota.svg` — logo a tutta area barrato dalla X blu elettrico,
+    "VOTA / LISTA 2" nell'ultimo terzo del cerchio: versione d'urto per il giorno del voto;
+  - `templates/sticker-60mm-qr.svg` — solo QR con logo al centro, per rimandare al sito.
+- Logo in stampa: colore ufficiale Blu Profondo `#1D4ED8` (scelta di Leo, vale anche su
+  fondo scuro delle locandine); in bianco solo su fondi blu o pieni.
 - Regola generale stampa: niente glow/blur (sono effetti schermo); sostituirli con
   retini o righe diagonali.
 
@@ -188,6 +193,7 @@ default sans (Jakarta) per il body.
 brand/
   brand-guidelines.md      ← questo documento
   logo-4real.svg           ← master vettoriale del logo (Blu Profondo #1D4ED8)
+  qr-lista4real.svg        ← QR del sito con logo al centro (EC H)
   templates/
     ig-post-1080x1080.svg
     story-1080x1920.svg
@@ -195,6 +201,7 @@ brand/
     volantino-a5-retro.svg
     sticker-60mm-logo.svg
     sticker-60mm-vota.svg
+    sticker-60mm-qr.svg
 ```
 
 Export SVG → PNG: `inkscape file.svg --export-type=png --export-width=2160` oppure
