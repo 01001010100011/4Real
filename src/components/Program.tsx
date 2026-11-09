@@ -1,15 +1,18 @@
 import { motion } from 'framer-motion'
-import { CalendarDays, GraduationCap, HeartHandshake, Wifi, Check, ArrowUpRight } from 'lucide-react'
+import { Users, Trophy, PartyPopper, BookOpen, Heart, Mic, Wifi, Check, ArrowUpRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { programItems, type ProgramItem } from '../data/content'
 import SectionHeading from './ui/SectionHeading'
 import { isFinePointer } from '../lib/useFinePointer'
 
 const iconMap: Record<ProgramItem['icon'], LucideIcon> = {
-  'graduation-cap': GraduationCap,
-  'calendar-days': CalendarDays,
   wifi: Wifi,
-  'heart-handshake': HeartHandshake,
+  users: Users,
+  trophy: Trophy,
+  'party-popper': PartyPopper,
+  'book-open': BookOpen,
+  heart: Heart,
+  mic: Mic,
 }
 
 export default function Program() {
@@ -22,7 +25,7 @@ export default function Program() {
         eyebrow="Il Programma"
         title={
           <>
-            Quattro aree, <span className="text-gradient">azioni concrete</span>
+            Sette temi, <span className="text-gradient">azioni concrete</span>
           </>
         }
         subtitle="Niente slogan: ogni punto è misurabile e verrà rendicontato pubblicamente durante il mandato."

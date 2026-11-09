@@ -45,7 +45,7 @@ export const candidates: Candidate[] = [
 ]
 
 export interface ProgramItem {
-  icon: 'graduation-cap' | 'calendar-days' | 'wifi' | 'heart-handshake'
+  icon: 'wifi' | 'users' | 'trophy' | 'party-popper' | 'book-open' | 'heart' | 'mic'
   title: string
   description: string
   points: string[]
@@ -70,27 +70,61 @@ export const programItems: ProgramItem[] = [
     linkLabel: 'Apri: i progetti già online',
   },
   {
-    icon: 'calendar-days',
-    title: 'Eventi & Community',
+    icon: 'users',
+    title: 'Cogestione & assemblee vive',
     description:
-      'Vita studentesca viva tutto l\'anno: tornei, serate, workshop e iniziative culturali organizzate con voi.',
-    points: ['Calendario eventi partecipato', 'Tornei sportivi d\'istituto'],
+      'La scuola si decide con voi: assemblee strutturate e tematiche, dibattiti interattivi e workshop pratici, con il supporto degli strumenti digitali che abbiamo già creato.',
+    points: [
+      'Assemblee strutturate e tematiche',
+      'Debattiti interattivi alternati alle assemblee tradizionali',
+      'Workshop pratici: orientamento, primo soccorso, educazione finanziaria, salute mentale',
+      'Incontri con esperti esterni proposti dagli studenti',
+    ],
+    span: 'md:col-span-2',
+  },
+  {
+    icon: 'trophy',
+    title: 'Sport & tornei d\'istituto',
+    description:
+      'Si gioca davvero: tornei durante tutto l\'anno e una Giornata dello Sport condivisa con altre scuole.',
+    points: [
+      'Calcio, pallavolo, scacchi ed e-sports',
+      'Tornei nell\'anno e in occasione della giornata dell\'arte e dello sport',
+      'Giornata dello Sport con altre scuole',
+    ],
     span: 'md:col-span-1',
   },
   {
-    icon: 'heart-handshake',
-    title: 'Trasparenza & Ascolto',
+    icon: 'party-popper',
+    title: 'Festa di fine anno',
     description:
-      'Ogni decisione presa vi riguarda: rendicontazione pubblica, bilancio chiaro e uno sportello sempre aperto per le vostre idee.',
-    points: [
-      'Bilancio pubblico',
-      'Sportello idee aperto',
-      'Report mensile',
-      'Feedback anonimo sui corsi',
-      'Rappresentanza reale nei consigli',
-      'Orari a misura di studente',
-    ],
-    span: 'md:col-span-2',
+      'Una festa vera, in orario scolastico: il modo giusto per chiudere l\'anno tutti insieme.',
+    points: ['In orario scolastico, per davvero', 'Organizzata con voi, aperta a tutti'],
+    span: 'md:col-span-1',
+  },
+  {
+    icon: 'book-open',
+    title: 'Annuario d\'Istituto',
+    description:
+      'Un annuario per ricordare l\'anno: classi, foto e momenti migliori, stampato in modo professionale.',
+    points: ['Costo indicativo 5–10€', 'Stampa professionale tramite servizio esterno'],
+    span: 'md:col-span-1',
+  },
+  {
+    icon: 'heart',
+    title: 'Box di San Valentino',
+    description:
+      'Un bigliettino anonimo a chi vuoi: si compila un form online e alla consegna nessuno sa niente.',
+    points: ['Compilazione tramite form online', 'Consegna riservata: anonimato garantito'],
+    span: 'md:col-span-1',
+  },
+  {
+    icon: 'mic',
+    title: 'Rocci\'s Got Talent',
+    description:
+      'Il palco è vostro: un talent d\'istituto per musica, ballo, comicità e qualsiasi talento abbiate.',
+    points: ['Iscrizioni aperte a tutti gli studenti', 'Votazione del pubblico trasparente'],
+    span: 'md:col-span-3',
   },
 ]
 
