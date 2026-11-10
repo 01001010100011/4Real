@@ -30,6 +30,13 @@
   <text x="33" y="147" font-family="Space Grotesk, sans-serif" font-size="7" font-weight="700" fill="#FFFFFF">Metti una X.</text>
   <text x="33" y="154" font-family="Plus Jakarta Sans, sans-serif" font-size="4.6" fill="#9FB0C9">Al resto ci pensiamo noi.</text>
 
+  <!-- Candidati (ordine ufficiale della lista) -->
+  <text x="14" y="170" font-family="Space Mono, monospace" font-size="3.4" font-weight="700" letter-spacing="0.7" fill="#A5D8FF">I CANDIDATI</text>
+  <text x="14" y="178.5" font-family="Plus Jakarta Sans, sans-serif" font-size="5" font-weight="600" fill="#FFFFFF">Leonardo Riello <tspan font-family="Space Mono, monospace" font-size="3.6" font-weight="700" fill="#5B9CFF">4CS</tspan></text>
+  <text x="84" y="178.5" font-family="Plus Jakarta Sans, sans-serif" font-size="5" font-weight="600" fill="#FFFFFF">Federica Fantozzi <tspan font-family="Space Mono, monospace" font-size="3.6" font-weight="700" fill="#5B9CFF">4AS</tspan></text>
+  <text x="14" y="186.5" font-family="Plus Jakarta Sans, sans-serif" font-size="5" font-weight="600" fill="#FFFFFF">Elena Millesimi <tspan font-family="Space Mono, monospace" font-size="3.6" font-weight="700" fill="#5B9CFF">4CS</tspan></text>
+  <text x="84" y="186.5" font-family="Plus Jakarta Sans, sans-serif" font-size="5" font-weight="600" fill="#FFFFFF">Simone Ricci <tspan font-family="Space Mono, monospace" font-size="3.6" font-weight="700" fill="#5B9CFF">4BL</tspan></text>
+
   <text x="14" y="200" font-family="Space Mono, monospace" font-size="4.4" font-weight="700" fill="#5B9CFF">lista4real.online</text>
   <text x="14" y="207" font-family="Plus Jakarta Sans, sans-serif" font-size="3.8" fill="#9FB0C9">Liceo Statale «L. Rocci» · Fara in Sabina</text>
   <!-- versione monocromatica per fotocopie: tutti i fill/stroke #000 su fondo #FFF -->
