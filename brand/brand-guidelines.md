@@ -161,9 +161,9 @@ righe diagonali in basso a destra · handle `@4real` in basso. Fondo Nero Reale,
     uno per riga, con QR reale puntato a lista4real.online già incorporato.
   Per fotocopie in B/N: versione monocromatica nera su bianco (commento in fondo ai file).
 - **QR code** `brand/qr-lista4real.svg` — punta a lista4real.online, generato con
-  correzione d'errore H e logo Blu Profondo al centro (copre ~9% della superficie,
-  dentro la tolleranza del 30%). Lo stesso QR con logo è incorporato nel retro del
-  volantino e nello sticker QR.
+  correzione d'errore H; al centro un vuoto circolare (niente placca quadrata) con il
+  logo Blu Profondo che lo riempie (variante D scelta da Leo). Decodifica verificata.
+  Lo stesso QR è incorporato nel retro del volantino e nello sticker QR.
 - **Sticker tondi 60mm**, fustella con 2mm di margine, fondo bianco:
   - `templates/sticker-60mm-logo.svg` — solo logo Blu Profondo a tutta area;
   - `templates/sticker-60mm-vota.svg` — logo a tutta area barrato dalla X blu elettrico,
