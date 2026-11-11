@@ -84,18 +84,6 @@ function CandidateCard({
         >
           {candidate.classe}
         </p>
-        <p
-          className="mt-1.5 text-center text-sm leading-relaxed text-ink-muted"
-          style={{ transform: 'translateZ(16px)' }}
-        >
-          {candidate.role}
-        </p>
-        <span
-          className="mt-4 block w-fit rounded-full border border-surface-border bg-white/5 px-3 py-1 text-xs font-semibold text-ice mx-auto transition-colors group-hover:border-primary/50"
-          style={{ transform: 'translateZ(12px)' }}
-        >
-          {candidate.tag}
-        </span>
       </motion.div>
     </motion.div>
   )
@@ -111,7 +99,7 @@ export default function Team() {
             Quattro volti, <span className="text-gradient">un impegno solo</span>
           </>
         }
-        subtitle="Persone reali, con nome e cognome, che ci mettono la faccia. Ogni membro ha un ruolo preciso e responsabilità pubbliche."
+        subtitle="Persone reali, con nome e cognome, che ci mettono la faccia."
       />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {candidates.map((candidate, i) => (

@@ -1,13 +1,5 @@
-import { Instagram, Facebook, Youtube, MessageCircle } from 'lucide-react'
 import { election } from '../data/content'
 import Logo from './Logo'
-
-const socials = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
-  { icon: MessageCircle, label: 'TikTok', href: '#' },
-]
 
 export default function Footer() {
   return (
@@ -15,19 +7,6 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-px max-w-md bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-12">
-        <div className="flex items-center gap-4">
-          {socials.map(({ icon: Icon, label, href }) => (
-            <a
-              key={label}
-              href={href}
-              aria-label={label}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-surface-border bg-white/5 text-ink-muted transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:text-ice hover:shadow-glow"
-            >
-              <Icon size={18} />
-            </a>
-          ))}
-        </div>
-
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center gap-4">
             <Logo className="h-11 w-11 text-primary-deep" glow />

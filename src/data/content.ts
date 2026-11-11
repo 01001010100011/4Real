@@ -1,7 +1,5 @@
 export interface Candidate {
   name: string
-  role: string
-  tag: string
   initials: string
   classe: string
 }
@@ -16,29 +14,21 @@ export const election = {
 export const candidates: Candidate[] = [
   {
     name: 'Leonardo Riello',
-    role: 'Coordinatore · Voce degli studenti',
-    tag: '#Concretezza',
     initials: 'LR',
     classe: '4CS',
   },
   {
     name: 'Federica Fantozzi',
-    role: 'Eventi & Vita studentesca',
-    tag: '#Energia',
     initials: 'FF',
     classe: '4AS',
   },
   {
     name: 'Elena Millesimi',
-    role: 'Diritto allo studio & Servizi',
-    tag: '#Trasparenza',
     initials: 'EM',
     classe: '4CS',
   },
   {
     name: 'Simone Ricci',
-    role: 'Strutture & Innovazione digitale',
-    tag: '#Futuro',
     initials: 'SR',
     classe: '4BL',
   },
@@ -183,11 +173,6 @@ export const faqItems: FaqItem[] = [
     question: 'Cosa succede dopo le elezioni?',
     answer:
       'Se sceglierete di darci fiducia, ci impegneremo a portare avanti il nostro programma con la massima trasparenza, chiarezza e puntualità, mantenendo un dialogo sempre aperto e lucido. E cercheremo VERAMENTE di risolvere tutte le problematiche da voi esposte.',
-  },
-  {
-    question: 'Posso unirmi al gruppo di lavoro?',
-    answer:
-      'Assolutamente sì. Cerchiamo sempre persone motivate per eventi, comunicazione e progetti digitali: candidati e verrai coinvoltə nelle prossime attività.',
   },
 ]
 
