@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # 12/11 alle 08:30 di Roma: ripubblicazione senza gate e con meta pubblici
+    - cron: '30 7 12 11 *'
 
 permissions:
   contents: read
@@ -23,10 +26,19 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - name: Gate window (aperto dal 12/11 08:30 Roma)
+        id: gate
+        run: |
+          open=''
+          if [ "$(date -u +%s)" -ge 1794468600 ] || [ "${{ github.event_name }}" = "schedule" ]; then open=1; fi
+          echo "open=$open" >> "$GITHUB_OUTPUT"
       - run: npm ci
       - run: npm run build
         env:
           VITE_ACCESS_HASH: ${{ secrets.VITE_ACCESS_HASH }}
+          VITE_GATE_OPEN: ${{ steps.gate.outputs.open }}
+          VITE_ROBOTS: ${{ steps.gate.outputs.open == '1' && 'index, follow' || 'noindex, nofollow' }}
+          VITE_DESCRIPTION: ${{ steps.gate.outputs.open == '1' && '4Real, lista n. 2 per il Consiglio di Istituto 2026/2027. Per una scuola che ci rappresenta veramente.' || 'Contenuto riservato ai membri della lista.' }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b0e11" />
-    <!-- Gate attiva: titolo/description neutrali e noindex fino alla rimozione del gate (post 12/11) -->
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="description" content="Contenuto riservato ai membri della lista." />
-    <title>Area riservata</title>
+    <!-- Fino alle 08:30 del 12/11/2026 il build inietta noindex/description riservata (VITE_ROBOTS/VITE_DESCRIPTION); dopo scattano i valori pubblici -->
+    <meta name="robots" content="%VITE_ROBOTS%" />
+    <meta name="description" content="%VITE_DESCRIPTION%" />
+    <title>4Real — Lista 2 · Consiglio di Istituto 2026/2027</title>
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

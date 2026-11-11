@@ -7,7 +7,7 @@ import Faq from './components/Faq'
 import Footer from './components/Footer'
 import AccessGate from './components/AccessGate'
 import DigitalePage from './components/DigitalePage'
-import { expectedHash, isUnlocked } from './lib/access'
+import { expectedHash, gateIsOff, isUnlocked } from './lib/access'
 
 function routeFromHash(): string {
   const h = window.location.hash
@@ -17,7 +17,7 @@ function routeFromHash(): string {
 
 export default function App() {
   const expected = expectedHash()
-  const [unlocked, setUnlocked] = useState(() => isUnlocked(expected))
+  const [unlocked, setUnlocked] = useState(() => gateIsOff() || isUnlocked(expected))
   const [route, setRoute] = useState(routeFromHash)
 
   useEffect(() => {
