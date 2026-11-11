@@ -1,4 +1,4 @@
-import { useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Edges, Sparkles } from '@react-three/drei'
 import * as THREE from 'three'
@@ -239,25 +239,43 @@ function BallotUrna() {
 }
 
 export default function HeroScene() {
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const [loop, setLoop] = useState<'always' | 'never'>('always')
+
+  // Fuori dallo viewport la scena non deve rubare GPU allo scroll (lag paint su iOS)
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el || typeof IntersectionObserver === 'undefined') return
+    const io = new IntersectionObserver(
+      ([entry]) => setLoop(entry.isIntersecting ? 'always' : 'never'),
+      { rootMargin: '120px' },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+
   return (
-    <Canvas
-      camera={{ position: [0, 0.2, 5.6], fov: 42 }}
-      dpr={[1, 1.75]}
-      gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
-      aria-hidden="true"
-    >
-      <ambientLight intensity={0.45} />
-      <pointLight position={[4, 4, 6]} intensity={45} color="#5B9CFF" />
-      <pointLight position={[-5, -3, -4]} intensity={18} color="#A5D8FF" />
-      <BallotUrna />
-      <Sparkles
-        count={70}
-        scale={[8, 6, 4]}
-        size={2}
-        speed={0.3}
-        opacity={0.45}
-        color="#A5D8FF"
-      />
-    </Canvas>
+    <div ref={wrapRef} className="h-full w-full">
+      <Canvas
+        frameloop={loop}
+        camera={{ position: [0, 0.2, 5.6], fov: 42 }}
+        dpr={[1, 1.75]}
+        gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
+        aria-hidden="true"
+      >
+        <ambientLight intensity={0.45} />
+        <pointLight position={[4, 4, 6]} intensity={45} color="#5B9CFF" />
+        <pointLight position={[-5, -3, -4]} intensity={18} color="#A5D8FF" />
+        <BallotUrna />
+        <Sparkles
+          count={70}
+          scale={[8, 6, 4]}
+          size={2}
+          speed={0.3}
+          opacity={0.45}
+          color="#A5D8FF"
+        />
+      </Canvas>
+    </div>
   )
 }

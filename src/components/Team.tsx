@@ -50,37 +50,39 @@ function CandidateCard({
       whileInView={reveal ? { opacity: 1, y: 0 } : undefined}
       viewport={reveal ? { once: true, margin: '-60px' } : undefined}
       transition={reveal ? { duration: 0.55, delay: index * 0.08, ease: 'easeOut' } : undefined}
-      style={{ perspective: 900 }}
+      style={fine ? { perspective: 900 } : undefined}
     >
       <motion.div
         ref={ref}
         onPointerMove={fine ? onPointerMove : undefined}
         onPointerLeave={fine ? onPointerLeave : undefined}
-        style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+        style={fine ? { rotateX, rotateY, transformStyle: 'preserve-3d' } : undefined}
         className="glass group relative overflow-hidden p-6 transition-colors duration-300 hover:border-primary/40"
       >
-        <motion.div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          style={{ background: glowBackground }}
-        />
+        {fine && (
+          <motion.div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            style={{ background: glowBackground }}
+          />
+        )}
 
         <div
           className="relative mx-auto flex h-24 w-24 items-center justify-center rounded-full border-2 border-primary/50 bg-gradient-to-br from-primary/25 to-transparent text-2xl font-extrabold text-ice shadow-glow transition-all duration-300 group-hover:border-primary group-hover:shadow-glow-lg"
-          style={{ transform: 'translateZ(30px)' }}
+          style={fine ? { transform: 'translateZ(30px)' } : undefined}
         >
           {candidate.initials}
         </div>
 
         <h3
           className="font-display mt-5 text-center text-lg font-bold tracking-tight"
-          style={{ transform: 'translateZ(24px)' }}
+          style={fine ? { transform: 'translateZ(24px)' } : undefined}
         >
           {candidate.name}
         </h3>
         <p
           className="mt-1 text-center font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-ice"
-          style={{ transform: 'translateZ(20px)' }}
+          style={fine ? { transform: 'translateZ(20px)' } : undefined}
         >
           {candidate.classe}
         </p>
