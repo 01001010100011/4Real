@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#04070F" />
+  <meta name="robots" content="noindex" />
+  <title>404 — 4Real - Lista 2</title>
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --canvas: #04070F;
+      --surface: rgba(148, 180, 255, 0.06);
+      --surface-solid: #0A1120;
+      --border: rgba(148, 180, 255, 0.14);
+      --primary: #3B82F6;
+      --bright: #5B9CFF;
+      --deep: #1D4ED8;
+      --ice: #A5D8FF;
+      --ink: #FFFFFF;
+      --muted: #9FB0C9;
+      --dim: #64748B;
+      --danger: #FF5C5C;
+      --display: "Space Grotesk", "Plus Jakarta Sans", system-ui, sans-serif;
+      --sans: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+      --mono: "Space Mono", ui-monospace, monospace;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-tap-highlight-color: transparent; }
+    body {
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: #1e293b var(--canvas);
+    }
+    ::selection { background: rgba(59, 130, 246, 0.4); color: #fff; }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--canvas); }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 8px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+    /* ---- Fondale stratificato: aurora + griglia + grana ---- */
+    .bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+    .aurora { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.55; }
+    .a1 {
+      width: 62vmax; height: 62vmax; top: -28vmax; left: -18vmax;
+      background: radial-gradient(circle, rgba(29, 78, 216, 0.55), transparent 65%);
+      animation: drift1 26s ease-in-out infinite alternate;
+    }
+    .a2 {
+      width: 54vmax; height: 54vmax; bottom: -26vmax; right: -16vmax;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.42), transparent 65%);
+      animation: drift2 32s ease-in-out infinite alternate;
+    }
+    .a3 {
+      width: 34vmax; height: 34vmax; top: 34%; left: -14vmax;
+      background: radial-gradient(circle, rgba(165, 216, 255, 0.16), transparent 65%);
+      animation: drift3 38s ease-in-out infinite alternate;
+    }
+    @keyframes drift1 { to { transform: translate(9vmax, 7vmax) scale(1.12); } }
+    @keyframes drift2 { to { transform: translate(-8vmax, -6vmax) scale(1.08); } }
+    @keyframes drift3 { to { transform: translate(10vmax, -5vmax) scale(1.15); } }
+    .dots {
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(148, 180, 255, 0.09) 1px, transparent 1px);
+      background-size: 28px 28px;
+      -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 38%, #000 25%, transparent 78%);
+      mask-image: radial-gradient(ellipse 75% 65% at 50% 38%, #000 25%, transparent 78%);
+    }
+    .grain {
+      position: absolute; inset: 0; opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+    }
+    .vignette {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 120% 100% at 50% 45%, transparent 55%, rgba(2, 4, 10, 0.55) 100%);
+    }
+
+    .wrap {
+      position: relative; z-index: 1;
+      /* margin:auto centra in verticale senza tagliare il contenuto quando è più alto del viewport */
+      margin: auto;
+      width: min(560px, 100%);
+      padding: clamp(32px, 7vh, 64px) 22px calc(30px + env(safe-area-inset-bottom));
+      text-align: center;
+    }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+    /* ---- Stato errore ---- */
+    .status {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: var(--mono); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.2em; color: var(--muted);
+      border: 1px solid var(--border); background: var(--surface);
+      padding: 8px 14px; border-radius: 999px;
+      animation: rise 0.6s var(--ease) 0.05s both;
+    }
+    .status .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--danger);
+      box-shadow: 0 0 10px rgba(255, 92, 92, 0.8);
+      animation: blink 1.6s ease-in-out infinite;
+    }
+
+    /* ---- 404 con lo zero = monogramma ---- */
+    .lockup {
+      margin: 26px auto 8px;
+      display: flex; align-items: center; justify-content: center; gap: 0.06em;
+      font-size: clamp(88px, 24vw, 150px);
+      animation: rise 0.7s var(--ease) 0.15s both, float 7s ease-in-out 1s infinite;
+    }
+    .digit {
+      font-family: var(--display); font-weight: 700; line-height: 1;
+      letter-spacing: -0.03em;
+      background-image: linear-gradient(120deg, #ffffff 20%, #5b9cff 60%, #a5d8ff 95%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .zero {
+      position: relative;
+      width: 0.74em; height: 0.74em; flex-shrink: 0;
+      display: grid; place-items: center;
+      background: var(--surface-solid);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      box-shadow: 0 0 60px rgba(59, 130, 246, 0.28), inset 0 0 24px rgba(59, 130, 246, 0.12);
+    }
+    .zero .ring {
+      position: absolute; inset: -0.055em; border-radius: 50%;
+      background: conic-gradient(from 0deg, transparent 0 68%, rgba(91, 156, 255, 0.9) 86%, transparent 100%);
+      -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1.5px));
+      mask: radial-gradient(farthest-side, transparent calc(100% - 2.5px), #000 calc(100% - 1.5px));
+      animation: spin 9s linear infinite;
+    }
+    .zero svg { position: relative; width: 0.44em; height: 0.44em; }
+
+    h1 {
+      font-family: var(--display); font-weight: 700;
+      font-size: clamp(24px, 6.4vw, 34px); letter-spacing: -0.01em;
+      animation: rise 0.7s var(--ease) 0.28s both;
+    }
+    .lead {
+      margin: 12px auto 0; max-width: 42ch;
+      font-size: 15px; font-weight: 500; color: var(--muted); line-height: 1.6;
+      animation: rise 0.7s var(--ease) 0.36s both;
+    }
+    .path {
+      margin: 16px auto 0; max-width: 100%;
+      font-family: var(--mono); font-size: 11px; color: var(--dim);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      animation: rise 0.7s var(--ease) 0.42s both;
+    }
+    .path b { color: var(--muted); font-weight: 400; }
+
+    /* ---- Pulsante home ---- */
+    .cta {
+      position: relative; overflow: hidden;
+      margin-top: 28px;
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 28px;
+      font-family: var(--display); font-weight: 700; font-size: 16px;
+      letter-spacing: 0.01em; color: #fff; text-decoration: none;
+      background: linear-gradient(135deg, var(--deep), var(--primary));
+      border: 1px solid rgba(165, 216, 255, 0.35);
+      border-radius: 14px;
+      box-shadow: 0 0 24px rgba(59, 130, 246, 0.35), 0 10px 30px rgba(2, 6, 16, 0.5);
+      transition: transform 0.25s var(--ease), box-shadow 0.25s, filter 0.25s;
+      animation: rise 0.65s var(--ease) 0.5s both;
+    }
+    .cta::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.22) 50%, transparent 60%);
+      transform: translateX(-130%);
+      transition: transform 0.9s var(--ease);
+      pointer-events: none;
+    }
+    .cta:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.1);
+      box-shadow: 0 0 40px rgba(59, 130, 246, 0.5), 0 16px 40px rgba(2, 6, 16, 0.55);
+    }
+    .cta:hover::after { transform: translateX(130%); }
+    .cta:active { transform: translateY(-1px) scale(0.98); }
+    .cta:focus-visible { outline: 2px solid var(--bright); outline-offset: 3px; }
+    .cta svg { width: 19px; height: 19px; transition: transform 0.25s var(--ease); }
+    .cta:hover svg { transform: translateX(-3px); }
+
+    .foot {
+      margin-top: 34px;
+      font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;
+      color: var(--dim); line-height: 1.8;
+      animation: rise 0.6s var(--ease) 0.62s both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div class="aurora a3"></div>
+    <div class="dots"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <main class="wrap">
+    <p class="status"><span class="dot" aria-hidden="true"></span>ERR_404 · PAGINA NON TROVATA</p>
+
+    <div class="lockup" role="img" aria-label="404">
+      <span class="digit" aria-hidden="true">4</span>
+      <span class="zero" aria-hidden="true">
+        <span class="ring"></span>
+        <svg viewBox="72 72 360 360" fill="#A5D8FF">
+          <g transform="translate(0,512) scale(0.1,-0.1)"><path d="M2385 4329 c-677 -52 -1284 -522 -1508 -1166 -157 -450 -117 -974 105 -1383 361 -665 1089 -1025 1828 -903 686 112 1264 658 1414 1333 127 579 -34 1157 -443 1583 -249 259 -540 424 -882 501 -100 22 -333 49 -393 45 -12 -1 -66 -5 -121 -10z m286 -249 c590 -60 1086 -457 1273 -1020 61 -185 71 -251 70 -475 0 -170 -3 -214 -22 -294 -75 -315 -212 -555 -445 -777 -391 -375 -950 -504 -1464 -338 -114 36 -305 133 -408 205 -110 79 -271 238 -348 346 -110 155 -189 323 -237 508 -107 411 -28 838 223 1210 86 126 256 293 391 383 129 87 188 117 320 167 213 79 425 107 647 85z"/><path d="M2364 3940 c-239 -34 -488 -136 -686 -282 -134 -98 -289 -263 -372 -397 -31 -48 -23 -46 49 15 212 179 556 344 845 405 152 32 373 33 485 1 134 -38 210 -95 262 -195 22 -42 27 -65 27 -122 0 -126 -66 -226 -214 -323 -47 -31 -395 -246 -773 -477 l-686 -420 685 -3 684 -2 0 -477 0 -478 144 144 144 144 -1 334 -2 333 345 0 346 0 131 123 131 122 -473 3 -472 2 -5 200 c-2 110 -7 202 -9 205 -3 3 -67 -32 -142 -77 l-137 -83 0 -122 0 -123 -247 0 c-146 0 -243 4 -237 9 8 8 579 354 824 500 108 64 213 162 252 237 77 143 77 327 2 477 -41 80 -153 184 -254 235 -132 66 -254 93 -435 97 -82 2 -177 0 -211 -5z"/><path d="M1703 3393 l-143 -86 0 -468 c0 -296 4 -469 10 -469 5 0 70 37 145 82 l135 82 0 473 c0 260 -1 473 -2 473 -2 -1 -67 -40 -145 -87z"/><path d="M1610 2095 c0 -31 105 -310 154 -410 61 -123 204 -354 191 -309 -3 11 -18 99 -34 195 -26 157 -38 249 -57 462 l-6 67 -124 0 c-68 0 -124 -2 -124 -5z"/></g>
+        </svg>
+      </span>
+      <span class="digit" aria-hidden="true">4</span>
+    </div>
+
+    <h1>Pagina non trovata</h1>
+    <p class="lead">Il link che hai seguito non esiste o è stato spostato. Nessun problema: tutto quello che cerchi è sulla home della lista.</p>
+    <p class="path">percorso richiesto: <b id="path">/</b></p>
+
+    <a class="cta" href="/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Torna alla home
+    </a>
+
+    <footer class="foot">
+      <p>4Real — Lista 2 · Fatto dagli studenti, per gli studenti.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('path').textContent = location.pathname + location.search
+  </script>
+</body>
+</html>
