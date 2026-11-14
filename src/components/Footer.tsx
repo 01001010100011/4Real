@@ -1,5 +1,6 @@
 import { election } from '../data/content'
 import Logo from './Logo'
+import SocialLinks from './SocialLinks'
 
 export default function Footer() {
   return (
@@ -17,6 +18,13 @@ export default function Footer() {
           <p className="mt-2 text-xs text-ink-dim">
             Concretezza · Trasparenza · Rappresentanza reale
           </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-3">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-dim">
+            Seguici su
+          </p>
+          <SocialLinks withHandles />
         </div>
 
         <p className="text-xs text-ink-dim">

@@ -4,6 +4,7 @@ import { ArrowDown, Users, FileText } from 'lucide-react'
 import { isWebGLAvailable } from '../lib/webgl'
 import { election } from '../data/content'
 import Logo from './Logo'
+import SocialLinks from './SocialLinks'
 
 const HeroScene = lazy(() => import('./three/HeroScene'))
 
@@ -76,6 +77,18 @@ export default function Hero() {
               <FileText size={18} className="text-ice" />
               Il Programma
             </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-8 flex items-center gap-4 lg:self-start"
+          >
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-dim">
+              Seguici su
+            </span>
+            <SocialLinks />
           </motion.div>
         </div>
 

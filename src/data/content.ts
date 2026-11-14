@@ -11,6 +11,21 @@ export const election = {
   motto: 'Per una scuola che ci rappresenta veramente',
 }
 
+export const socials = [
+  {
+    id: 'instagram',
+    label: 'Instagram',
+    handle: '@4real_lista2',
+    url: 'https://www.instagram.com/4real_lista2',
+  },
+  {
+    id: 'tiktok',
+    label: 'TikTok',
+    handle: '@lista2_4real',
+    url: 'https://www.tiktok.com/@lista2_4real',
+  },
+]
+
 export const candidates: Candidate[] = [
   {
     name: 'Leonardo Riello',
